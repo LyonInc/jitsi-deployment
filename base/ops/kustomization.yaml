@@ -5,6 +5,5 @@ resources:
 - monitoring/
 - logging/
 - metacontroller/
-- ingress-nginx/
 - loadbalancer/
 - reflector/
