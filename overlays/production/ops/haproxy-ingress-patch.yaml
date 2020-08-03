@@ -6,10 +6,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - jitsi.messenger.schule
-    secretName: jitsi-messenger-schule-tls
+    - jitsi.messenger.lyon
+    secretName: jitsi-messenger-lyon-tls
   rules:
-    - host: jitsi.messenger.schule
+    - host: jitsi.messenger.lyon
       http:
         paths:
         - path: /

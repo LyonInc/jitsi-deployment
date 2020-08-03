@@ -7,7 +7,7 @@ spec:
   tls:
   - hosts:
     - jitsi.dev.messenger.schule
-    secretName: jitsi-messenger-schule-tls
+    secretName: jitsi-messenger-lyon-tls
   rules:
     - host: jitsi.dev.messenger.schule
       http:
