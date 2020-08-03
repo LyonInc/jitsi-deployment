@@ -66,20 +66,22 @@ spec:
             - name: HTTP_PORT
               value: "80"
             - name: XMPP_SERVER
-              value: prosody
+              value: conference.lyon.com.ph
             - name: JICOFO_AUTH_USER
               value: focus
             - name: XMPP_DOMAIN
-              value: meet.jitsi
+              value: conference.lyon.com.ph
             - name: XMPP_AUTH_DOMAIN
-              value: auth.meet.jitsi
+              value: auth.conference.lyon.com.ph
             - name: XMPP_INTERNAL_MUC_DOMAIN
-              value: internal-muc.meet.jitsi
+              value: internal.auth.conference.lyon.com.ph
             - name: XMPP_BOSH_URL_BASE
               value: http://prosody:5280
             - name: XMPP_MUC_DOMAIN
-              value: muc.meet.jitsi
+              value: conference.<!--# echo var="subdomain" default="" -->conference.lyon.com.ph
             - name: TZ
               value: Asia/Manila
             - name: JVB_TCP_HARVESTER_DISABLED
               value: "true"
+            - name: XMPP_RECORDER_DOMAIN
+              value: recorder.conference.lyon.com.ph

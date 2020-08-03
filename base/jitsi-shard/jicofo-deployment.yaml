@@ -39,13 +39,15 @@ spec:
               port: 8888
           env:
             - name: XMPP_SERVER
-              value: prosody
+              value: conference.lyon.com.ph
             - name: XMPP_DOMAIN
-              value: meet.jitsi
+              value: conference.lyon.com.ph
             - name: XMPP_AUTH_DOMAIN
-              value: auth.meet.jitsi
+              value: auth.conference.lyon.com.ph
+            - name: XMPP_MUC_DOMAIN
+              value: conference.<!--# echo var="subdomain" default="" -->conference.lyon.com.ph
             - name: XMPP_INTERNAL_MUC_DOMAIN
-              value: internal-muc.meet.jitsi
+              value: internal.auth.conference.lyon.com.ph
             - name: JICOFO_COMPONENT_SECRET
               valueFrom:
                 secretKeyRef:
@@ -59,7 +61,7 @@ spec:
                   name: jitsi-config
                   key: JICOFO_AUTH_PASSWORD
             - name: TZ
-              value: Europe/Berlin
+              value: Asia/Manila
             - name: JVB_BREWERY_MUC
               value: jvbbrewery
             - name: JICOFO_ENABLE_HEALTH_CHECKS
