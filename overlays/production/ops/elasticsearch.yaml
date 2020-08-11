@@ -45,7 +45,7 @@ spec:
             resources:
               requests:
                 storage: 5Gi
-            storageClassName: do-block-storage
+            storageClassName: longhorn
     - name: client
       count: 2
       config:
