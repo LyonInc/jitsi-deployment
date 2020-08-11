@@ -8,10 +8,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - jitsi.messenger.lyon
+    - conference.lyon.ph
     secretName: jitsi-messenger-lyon-tls
   rules:
-    - host: jitsi.messenger.lyon
+    - host: conference.lyon.ph
       http:
         paths:
         # only match /grafana and paths under /grafana/

@@ -39,15 +39,15 @@ spec:
               port: 8888
           env:
             - name: XMPP_SERVER
-              value: conference.lyon.com.ph
+              value: conference.lyon.ph
             - name: XMPP_DOMAIN
-              value: conference.lyon.com.ph
+              value: conference.lyon.ph
             - name: XMPP_AUTH_DOMAIN
-              value: auth.conference.lyon.com.ph
+              value: auth.conference.lyon.ph
             - name: XMPP_MUC_DOMAIN
-              value: conference.conference.lyon.com.ph
+              value: conference.conference.lyon.ph
             - name: XMPP_INTERNAL_MUC_DOMAIN
-              value: internal.auth.conference.lyon.com.ph
+              value: internal.auth.conference.lyon.ph
             - name: JICOFO_COMPONENT_SECRET
               valueFrom:
                 secretKeyRef:

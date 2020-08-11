@@ -7,5 +7,5 @@ spec:
   tls:
   - hosts:
     # fill in host here
-    - conference.lyon.com.ph
+    - conference.lyon.ph
     secretName: jitsi-messenger-lyon-tls
