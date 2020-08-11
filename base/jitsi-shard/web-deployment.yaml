@@ -31,6 +31,8 @@ spec:
                 path: plugin.head.html
               - key: interface_config.js
                 path: interface_config.js
+              - key: config.js
+                path: config.js
       containers:
         - name: web
           resources:
@@ -55,6 +57,9 @@ spec:
             - name: web
               mountPath: /defaults/interface_config.js
               subPath: interface_config.js
+            - name: web
+              mountPath: /defaults/config.js
+              subPath: config.js
           env:
             - name: DISABLE_HTTPS
               value: "1"
