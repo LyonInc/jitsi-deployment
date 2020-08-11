@@ -29,8 +29,6 @@ spec:
                 path: welcomePageAdditionalContent.html
               - key: plugin.head.html
                 path: plugin.head.html
-              - key: config.js
-                path: config.js
               - key: interface_config.js
                 path: interface_config.js
       containers:
@@ -54,9 +52,6 @@ spec:
           - name: web
             mountPath: /usr/share/jitsi-meet/plugin.head.html
             subPath: plugin.head.html
-          - name: web
-            mountPath: /defaults/config.js
-            subPath: config.js
           - name: web
             mountPath: /defaults/interface_config.js
             subPath: interface_config.js
