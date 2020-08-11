@@ -46,15 +46,15 @@ spec:
             httpGet:
               port: 80
           volumeMounts:
-          - name: web
-            mountPath: /usr/share/jitsi-meet/static/welcomePageAdditionalContent.html
-            subPath: welcomePageAdditionalContent.html
-          - name: web
-            mountPath: /usr/share/jitsi-meet/plugin.head.html
-            subPath: plugin.head.html
-          - name: web
-            mountPath: /defaults/interface_config.js
-            subPath: interface_config.js
+            - name: web
+              mountPath: /usr/share/jitsi-meet/static/welcomePageAdditionalContent.html
+              subPath: welcomePageAdditionalContent.html
+            - name: web
+              mountPath: /usr/share/jitsi-meet/plugin.head.html
+              subPath: plugin.head.html
+            - name: web
+              mountPath: /defaults/interface_config.js
+              subPath: interface_config.js
           env:
             - name: DISABLE_HTTPS
               value: "1"
@@ -73,7 +73,7 @@ spec:
             - name: XMPP_BOSH_URL_BASE
               value: http://prosody:5280
             - name: XMPP_MUC_DOMAIN
-              value: conference.<!--# echo var="subdomain" default="" -->conference.lyon.com.ph
+              value: conference.conference.lyon.com.ph
             - name: TZ
               value: Asia/Manila
             - name: JVB_TCP_HARVESTER_DISABLED

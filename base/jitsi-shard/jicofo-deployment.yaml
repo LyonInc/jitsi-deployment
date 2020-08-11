@@ -45,7 +45,7 @@ spec:
             - name: XMPP_AUTH_DOMAIN
               value: auth.conference.lyon.com.ph
             - name: XMPP_MUC_DOMAIN
-              value: conference.<!--# echo var="subdomain" default="" -->conference.lyon.com.ph
+              value: conference.conference.lyon.com.ph
             - name: XMPP_INTERNAL_MUC_DOMAIN
               value: internal.auth.conference.lyon.com.ph
             - name: JICOFO_COMPONENT_SECRET
