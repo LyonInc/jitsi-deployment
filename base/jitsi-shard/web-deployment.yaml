@@ -61,8 +61,6 @@ spec:
               mountPath: /defaults/config.js
               subPath: config.js
           env:
-            - name: DISABLE_HTTPS
-              value: "1"
             - name: HTTP_PORT
               value: "80"
             - name: XMPP_SERVER
