@@ -45,7 +45,7 @@ spec:
               path: /about/health
               port: 8888
           volumeMounts:
-            - name: prosody
+            - name: jicofo
               mountPath: /config/sip-communicator.properties
               subPath: sip-communicator.properties
           env:
