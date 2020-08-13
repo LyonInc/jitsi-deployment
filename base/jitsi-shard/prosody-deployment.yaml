@@ -72,7 +72,7 @@ spec:
             subPath: mod_measure_client_presence.lua
           - name: prosody
             mountPath: /config/conf.d/jitsi-meet.cfg.lua
-            subpath: jitsi-meet.cfg.lua
+            subPath: jitsi-meet.cfg.lua
           env:
             - name: XMPP_DOMAIN
               value: conference.lyon.ph
