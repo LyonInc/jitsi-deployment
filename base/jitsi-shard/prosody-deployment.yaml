@@ -33,6 +33,8 @@ spec:
                 path: mod_measure_stanza_counts.lua
               - key: mod_measure_client_presence.lua
                 path: mod_measure_client_presence.lua
+              - key: jitsi-meet.cfg.lua
+                path: jitsi-meet.cfg.lua
       containers:
         - name: prosody
           resources:
@@ -68,6 +70,9 @@ spec:
           - name: prosody
             mountPath: /usr/lib/prosody/modules/mod_measure_client_presence.lua
             subPath: mod_measure_client_presence.lua
+          - name: prosody
+            mountPath: /config/conf.d/jitsi-meet.cfg.lua
+            subpath: jitsi-meet.cfg.lua
           env:
             - name: XMPP_DOMAIN
               value: conference.lyon.ph
@@ -79,6 +84,8 @@ spec:
               value: internal.auth.conference.lyon.ph
             - name: XMPP_RECORDER_DOMAIN
               value: recorder.conference.lyon.ph
+            - name: XMPP_GUEST_DOMAIN
+              value: guest.conference.lyon.ph
             - name: JICOFO_COMPONENT_SECRET
               valueFrom:
                 secretKeyRef:

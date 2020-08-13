@@ -20,6 +20,13 @@ spec:
       labels:
         k8s-app: jicofo
     spec:
+      volumes:
+          - name: jicofo
+            configMap:
+              name: jicofo
+              items:
+                - key: sip-communicator.properties
+                  path: sip-communicator.properties
       containers:
         - name: jicofo
           resources:
@@ -37,6 +44,10 @@ spec:
             httpGet:
               path: /about/health
               port: 8888
+          volumeMounts:
+            - name: prosody
+              mountPath: /config/sip-communicator.properties
+              subPath: sip-communicator.properties
           env:
             - name: XMPP_SERVER
               value: conference.lyon.ph
@@ -63,6 +74,6 @@ spec:
             - name: TZ
               value: Asia/Manila
             - name: JVB_BREWERY_MUC
-              value: jvbbrewery
+              value: JvbBrewery
             - name: JICOFO_ENABLE_HEALTH_CHECKS
               value: "true"
