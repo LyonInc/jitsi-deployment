@@ -27,5 +27,9 @@ data:
     echo "org.jitsi.videobridge.ENABLE_REST_SHUTDOWN=true" >> /defaults/sip-communicator.properties
     echo "org.jitsi.videobridge.shutdown.ALLOWED_SOURCE_REGEXP=127.0.0.1" >> /defaults/sip-communicator.properties
 
+    echo "org.jitsi.jicofo.auth.URL=XMPP:conference.lyon.com.ph" >> /defaults/sip-communicator.properties
+    echo "org.jitsi.jicofo.jibri.BREWERY=JibriBrewery@internal.auth.conference.lyon.com.ph" >> /defaults/sip-communicator.properties
+    echo "org.jitsi.jicofo.jibri.PENDING_TIMEOUT=90" >> /defaults/sip-communicator.properties
+
     exec "$@"
 
