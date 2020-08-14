@@ -8,10 +8,10 @@ spec:
   resources:
     requests:
       memory: 1000Mi
-      cpu: 1000m
+      cpu: 250m
     limits:
       memory: 1000Mi
-      cpu: 1000m
+      cpu: 500m
   storage:
     volumeClaimTemplate:
       metadata:

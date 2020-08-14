@@ -33,10 +33,10 @@ spec:
               readOnly: false
           resources:
             limits:
-              cpu: 600m
+              cpu: 500m
               memory: 600Mi
             requests:
-              cpu: 600m
+              cpu: 200m
               memory: 600Mi
       securityContext:
         fsGroup: 427
