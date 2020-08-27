@@ -9,6 +9,7 @@ resources:
 - web-configmap.yaml
 - jvb-entrypoint-configmap.yaml
 - jvb-shutdown-configmap.yaml
+- jibri-configmap.yaml
 
 commonLabels:
   scope: jitsi

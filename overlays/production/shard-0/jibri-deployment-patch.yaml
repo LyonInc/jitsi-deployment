@@ -6,6 +6,9 @@ metadata:
     k8s-app: jibri
   name: jibri
 spec:
+  selector:
+      matchLabels:
+        shard: "0"
   template:
     spec:
       # avoid that pods of different shards share zone
