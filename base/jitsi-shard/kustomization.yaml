@@ -5,6 +5,7 @@ resources:
 - web-deployment.yaml
 - jicofo-deployment.yaml
 - prosody-deployment.yaml
+- jibri-deployment.yaml
 - prosody-service.yaml
 - jvb/
 

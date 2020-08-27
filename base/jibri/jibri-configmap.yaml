@@ -1,0 +1,62 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: jibri
+  namespace: jitsi
+data:
+  .asoundrc: |-
+    # playback PCM device: using loopback subdevice 0,0
+    pcm.amix {
+    type dmix
+    ipc_key 219345
+    slave.pcm "hw:Loopback,0,0"
+    }
+
+    # capture PCM device: using loopback subdevice 0,1
+    pcm.asnoop {
+    type dsnoop
+    ipc_key 219346
+    slave.pcm "hw:Loopback,0,1"
+    }
+
+    # duplex device combining our PCM devices defined above
+    pcm.aduplex {
+    type asym
+    playback.pcm "amix"
+    capture.pcm "asnoop"
+    }
+
+    # ------------------------------------------------------
+    # for jack alsa_in and alsa_out: looped-back signal at other ends
+    pcm.ploop {
+    type plug
+    slave.pcm "hw:Loopback,1,1"
+    }
+
+    pcm.cloop {
+    type dsnoop
+    ipc_key 219348
+    slave.pcm "hw:Loopback,1,0"
+    }
+
+    # ------------------------------------------------------
+    # default device
+
+    pcm.!default {
+    type plug
+    slave.pcm "aduplex"
+
+  resolv.conf: |-
+    nameserver 8.8.8.8
+    nameserver 10.96.0.10
+    search jibri.svc.cluster.local svc.cluster.local cluster.local 
+    options ndots:5
+
+  finalize.sh: |-
+    #!/bin/bash
+    RECORDINGS_DIR=$1
+    echo "This is a dummy finalize script" > /tmp/finalize.out
+    echo "The script was invoked with recordings directory $RECORDINGS_DIR." >> /tmp/finalize.out
+    echo "You should put any finalize logic (renaming, uploading to a service" >> /tmp/finalize.out
+    echo "or storage provider, etc.) in this script" >> /tmp/finalize.out
+    exit 0

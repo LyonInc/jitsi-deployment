@@ -109,7 +109,7 @@ data:
         LOCAL_THUMBNAIL_RATIO: 16 / 9, // 16:9
         REMOTE_THUMBNAIL_RATIO: 1, // 1:1
         // Documentation reference for the live streaming feature.
-        LIVE_STREAMING_HELP_LINK: 'https://jitsi.org/live',
+        LIVE_STREAMING_HELP_LINK: 'https://blog.lyon.com.ph',
         /**
          * Whether the mobile app Jitsi Meet is to be promoted to participants
          * attempting to join a conference in a mobile Web browser. If
@@ -129,7 +129,7 @@ data:
          * If indicated some of the error dialogs may point to the support URL for
          * help.
          */
-        SUPPORT_URL: 'https://community.jitsi.org/',
+        SUPPORT_URL: 'https://lyon.com.ph',
         /**
          * Whether the connection indicator icon should hide itself based on
          * connection strength. If true, the connection indicator will remain
