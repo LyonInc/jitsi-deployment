@@ -63,7 +63,7 @@ spec:
             - name: JIBRI_BREWERY_MUC
               value: JibriBrewery
             - name: JIBRI_PENDING_TIMEOUT
-              value: 90
+              value: "90"
             - name: JIBRI_RECORDER_USER
               value: recorder
             - name: JIBRI_RECORDER_PASSWORD
