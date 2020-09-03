@@ -22,7 +22,7 @@ spec:
         - name: jibri
           env:
             - name: XMPP_SERVER
-              value: shard-0-prosody
+              value: shard-1-prosody
     metadata:
       labels:
         shard: "1"
