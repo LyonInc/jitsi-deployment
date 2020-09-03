@@ -7,7 +7,7 @@ patchesStrategicMerge:
   - jicofo-deployment-patch.yaml
   - web-deployment-patch.yaml
   - prosody-deployment-patch.yaml
-  - jibri-deployment-patch.yaml
+  - jibri-statefulset-patch.yaml
 
 namespace: jitsi
 

@@ -20,6 +20,8 @@ spec:
         k8s-app: jibri
         shard: "0"
     spec:
+      nodeSelector:
+        server-size: large
       initContainers:
         - name: init-set
           image: xuxant/init-container
@@ -34,7 +36,7 @@ spec:
           resources:
             limits:
               memory: 4000Mi
-              cpu: 2000m
+              cpu: 2500m
             requests:
               memory: 2000Mi
               cpu: 1000m
@@ -85,9 +87,6 @@ spec:
             - name: jibri
               mountPath: /config/finalize.sh
               subPath: finalize.sh
-            - name: jibri
-              mountPath: /home/jibri/.asoundrc
-              subpath: .asoundrc
             - name: jibri-recorder
               mountPath: /config/recordings
             - name: jibri-logs
@@ -113,9 +112,6 @@ spec:
                 path: resolv.conf
               - key: finalize.sh
                 path: finalize.sh
-        - name: jibri-recorder
-          persistentVolumeClaim:
-            claimName: jibri-recorder
         - name: jibri-logs
           emptyDir: {}
         - name: snd

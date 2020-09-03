@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   namespace: jitsi
   labels:
@@ -7,15 +7,22 @@ metadata:
   name: jibri
 spec:
   selector:
-      matchLabels:
-        shard: "0"
+    matchLabels:
+      shard: "1"
   template:
     spec:
       # avoid that pods of different shards share zone
       nodeSelector:
-        topology.kubernetes.io/zone: ZONE_1
+        topology.kubernetes.io/zone: ZONE_2
+      volumes:
+        - name: jibri-recorder
+          persistentVolumeClaim:
+            claimName: jibri-recorder
       containers:
         - name: jibri
           env:
             - name: XMPP_SERVER
               value: shard-0-prosody
+    metadata:
+      labels:
+        shard: "1"
