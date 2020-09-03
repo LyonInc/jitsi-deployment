@@ -6,10 +6,10 @@ metadata:
 spec:
   tls:
   - hosts:
-    - conference.lyon.ph
+    - conference.lyon.com.ph
     secretName: jitsi-messenger-lyon-tls
   rules:
-    - host: conference.lyon.ph
+    - host: conference.lyon.com.ph
       http:
         paths:
         - path: /
