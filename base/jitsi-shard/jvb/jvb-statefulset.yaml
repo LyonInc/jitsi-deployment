@@ -73,17 +73,17 @@ spec:
                 fieldRef:
                   fieldPath: metadata.name
             - name: XMPP_SERVER
-              value: conference.lyon.ph
+              value: conference.lyon.com.ph
             - name: DOCKER_HOST_ADDRESS
               valueFrom:
                 fieldRef:
                   fieldPath: status.hostIP
             - name: XMPP_DOMAIN
-              value: conference.lyon.ph
+              value: conference.lyon.com.ph
             - name: XMPP_AUTH_DOMAIN
-              value: auth.conference.lyon.ph
+              value: auth.conference.lyon.com.ph
             - name: XMPP_INTERNAL_MUC_DOMAIN
-              value: internal.auth.conference.lyon.ph
+              value: internal.auth.conference.lyon.com.ph
             - name: JVB_STUN_SERVERS
               value: stun.l.google.com:19302,stun1.l.google.com:19302,stun2.l.google.com:19302
             - name: JICOFO_AUTH_USER

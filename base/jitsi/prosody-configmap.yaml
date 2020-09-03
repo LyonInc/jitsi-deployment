@@ -228,24 +228,24 @@ data:
 
   jitsi-meet.cfg.lua:  |
     plugin_paths = { "/prosody-plugins/", "/prosody-plugins-custom" }
-    http_default_host = "conference.lyon.ph"
+    http_default_host = "conference.lyon.com.ph"
 
     -- domain mapper options, must at least have domain base set to use the mapper
-    muc_mapper_domain_base = "conference.lyon.ph";
+    muc_mapper_domain_base = "conference.lyon.com.ph";
 
     turncredentials_secret = "1mflKJMs9Cfy08zN";
 
     turncredentials = {
-      { type = "stun", host = "conference.lyon.ph", port = "4446" },
-      { type = "turn", host = "conference.lyon.ph", port = "4446", transport = "udp" },
-      { type = "turns", host = "conference.lyon.ph", port = "443", transport = "tcp" }
+      { type = "stun", host = "conference.lyon.com.ph", port = "4446" },
+      { type = "turn", host = "conference.lyon.com.ph", port = "4446", transport = "udp" },
+      { type = "turns", host = "conference.lyon.com.ph", port = "443", transport = "tcp" }
     };
 
     cross_domain_bosh = false;
     consider_bosh_secure = true;
     -- https_ports = { }; -- Remove this line to prevent listening on port 5284
 
-    VirtualHost "conference.lyon.ph"
+    VirtualHost "conference.lyon.com.ph"
             -- enabled = false -- Remove this line to enable this host
             authentication = "anonymous"
             -- Properties below are modified by jitsi-meet-tokens package config
@@ -257,11 +257,11 @@ data:
             -- Note that old-style SSL on port 5223 only supports one certificate, and will always
             -- use the global one.
             ssl = {
-                key = "/config/certs/conference.lyon.ph.key";
-                certificate = "/config/certs/conference.lyon.ph.crt";
+                key = "/config/certs/conference.lyon.com.ph.key";
+                certificate = "/config/certs/conference.lyon.com.ph.crt";
             }
-            speakerstats_component = "speakerstats.conference.lyon.ph"
-            conference_duration_component = "conferenceduration.conference.lyon.ph"
+            speakerstats_component = "speakerstats.conference.lyon.com.ph"
+            conference_duration_component = "conferenceduration.conference.lyon.com.ph"
             -- we need bosh
             modules_enabled = {
                 "bosh";
@@ -273,45 +273,45 @@ data:
             }
             c2s_require_encryption = false
 
-    Component "conference.conference.lyon.ph" "muc"
+    Component "conference.conference.lyon.com.ph" "muc"
         storage = "memory"
         modules_enabled = {
             "muc_meeting_id";
             "muc_domain_mapper";
             -- "token_verification";
         }
-        admins = { "focus@auth.conference.lyon.ph" }
+        admins = { "focus@auth.conference.lyon.com.ph" }
         muc_room_locking = false
         muc_room_default_public_jids = true
 
     -- internal muc component
-    Component "internal.auth.conference.lyon.ph" "muc"
+    Component "internal.auth.conference.lyon.com.ph" "muc"
         storage = "memory"
         modules_enabled = {
           "ping";
         }
-        admins = { "focus@auth.conference.lyon.ph", "jvb@auth.conference.lyon.ph" }
+        admins = { "focus@auth.conference.lyon.com.ph", "jvb@auth.conference.lyon.com.ph" }
         muc_room_locking = false
         muc_room_default_public_jids = true
 
-    VirtualHost "auth.conference.lyon.ph"
+    VirtualHost "auth.conference.lyon.com.ph"
         ssl = {
-            key = "/config/certs/auth.conference.lyon.ph.key";
-            certificate = "/config/certs/auth.conference.lyon.ph.crt";
+            key = "/config/certs/auth.conference.lyon.com.ph.key";
+            certificate = "/config/certs/auth.conference.lyon.com.ph.crt";
         }
         authentication = "internal_hashed"
 
-    Component "focus.conference.lyon.ph"
+    Component "focus.conference.lyon.com.ph"
         component_secret = "K8rp2@r7"
 
-    Component "speakerstats.conference.lyon.ph" "speakerstats_component"
-        muc_component = "conference.conference.lyon.ph"
+    Component "speakerstats.conference.lyon.com.ph" "speakerstats_component"
+        muc_component = "conference.conference.lyon.com.ph"
 
-    Component "conferenceduration.conference.lyon.ph" "conference_duration_component"
-        muc_component = "conference.conference.lyon.ph"
+    Component "conferenceduration.conference.lyon.com.ph" "conference_duration_component"
+        muc_component = "conference.conference.lyon.com.ph"
 
     -- internal muc component, meant to enable pools of jibri and jigasi clients
-    Component "internal.auth.conference.lyon.ph" "muc"
+    Component "internal.auth.conference.lyon.com.ph" "muc"
         modules_enabled = {
           "ping";
         }
@@ -319,16 +319,16 @@ data:
         muc_room_cache_size = 1000
 
 
-    VirtualHost "recorder.conference.lyon.ph"
+    VirtualHost "recorder.conference.lyon.com.ph"
       modules_enabled = {
         "ping";
       }
       authentication = "internal_hashed"
 
-    VirtualHost "conference.lyon.ph"
+    VirtualHost "conference.lyon.com.ph"
         authentication = "internal_plain"
 
-    VirtualHost "guest.conference.lyon.ph"
+    VirtualHost "guest.conference.lyon.com.ph"
         authentication = "anonymous"
         c2s_require_encryption = false
 

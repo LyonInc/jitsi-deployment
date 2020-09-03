@@ -75,17 +75,17 @@ spec:
             subPath: jitsi-meet.cfg.lua
           env:
             - name: XMPP_DOMAIN
-              value: conference.lyon.ph
+              value: conference.lyon.com.ph
             - name: XMPP_AUTH_DOMAIN
-              value: auth.conference.lyon.ph
+              value: auth.conference.lyon.com.ph
             - name: XMPP_MUC_DOMAIN
-              value: conference.conference.lyon.ph
+              value: conference.conference.lyon.com.ph
             - name: XMPP_INTERNAL_MUC_DOMAIN
-              value: internal.auth.conference.lyon.ph
+              value: internal.auth.conference.lyon.com.ph
             - name: XMPP_RECORDER_DOMAIN
-              value: recorder.conference.lyon.ph
+              value: recorder.conference.lyon.com.ph
             - name: XMPP_GUEST_DOMAIN
-              value: guest.conference.lyon.ph
+              value: guest.conference.lyon.com.ph
             - name: JICOFO_COMPONENT_SECRET
               valueFrom:
                 secretKeyRef:

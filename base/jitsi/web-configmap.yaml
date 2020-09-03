@@ -246,38 +246,38 @@ data:
 
         hosts: {
             // XMPP domain.
-            domain: 'conference.lyon.ph',
+            domain: 'conference.lyon.com.ph',
 
             // When using authentication, domain for guest users.
-            anonymousdomain: 'guest.conference.lyon.ph',
+            anonymousdomain: 'guest.conference.lyon.com.ph',
 
             // Domain for authenticated users. Defaults to <domain>.
-            // authdomain: 'conference.lyon.ph',
+            // authdomain: 'conference.lyon.com.ph',
 
             // Jirecon recording component domain.
-            // jirecon: 'jirecon.conference.lyon.ph',
+            // jirecon: 'jirecon.conference.lyon.com.ph',
 
             // Call control component (Jigasi).
-            // call_control: 'callcontrol.conference.lyon.ph',
+            // call_control: 'callcontrol.conference.lyon.com.ph',
 
             // Focus component domain. Defaults to focus.<domain>.
-            // focus: 'focus.conference.lyon.ph',
+            // focus: 'focus.conference.lyon.com.ph',
 
             // XMPP MUC domain. FIXME: use XEP-0030 to discover it.
-            muc: 'conference.<!--# echo var="subdomain" default="" -->conference.lyon.ph'
+            muc: 'conference.<!--# echo var="subdomain" default="" -->conference.lyon.com.ph'
         },
 
         // BOSH URL. FIXME: use XEP-0156 to discover it.
-        bosh: '//conference.lyon.ph/http-bind',
+        bosh: '//conference.lyon.com.ph/http-bind',
 
         // Websocket URL
-        // websocket: 'wss://conference.lyon.ph/xmpp-websocket',
+        // websocket: 'wss://conference.lyon.com.ph/xmpp-websocket',
 
         // The name of client node advertised in XEP-0115 'c' stanza
         clientNode: 'http://jitsi.org/jitsimeet',
 
         // The real JID of focus participant - can be overridden here
-        // focusUserJid: 'focus@auth.conference.lyon.ph',
+        // focusUserJid: 'focus@auth.conference.lyon.com.ph',
 
 
         // Testing / experimental features.
@@ -421,9 +421,9 @@ data:
         //     appKey: '<APP_KEY>' // Specify your app key here.
         //     // A URL to redirect the user to, after authenticating
         //     // by default uses:
-        //     // 'https://conference.lyon.ph/static/oauth.html'
+        //     // 'https://conference.lyon.com.ph/static/oauth.html'
         //     redirectURI:
-        //          'https://conference.lyon.ph/subfolder/static/oauth.html'
+        //          'https://conference.lyon.com.ph/subfolder/static/oauth.html'
         // },
         // When integrations like dropbox are enabled only that will be shown,
         // by enabling fileRecordingsServiceEnabled, we show both the integrations
@@ -438,7 +438,7 @@ data:
         // Whether to enable live streaming or not.
         liveStreamingEnabled: true,
 
-        hiddenDomain: 'recorder.conference.lyon.ph',
+        hiddenDomain: 'recorder.conference.lyon.com.ph',
 
         // Transcription (in interface_config,
         // subtitles and buttons can be configured)
@@ -592,7 +592,7 @@ data:
             // The STUN servers that will be used in the peer to peer connections
             stunServers: [
 
-                // { urls: 'stun:conference.lyon.ph:4446' },
+                // { urls: 'stun:conference.lyon.com.ph:4446' },
                 { urls: 'stun:meet-jit-si-turnrelay.jitsi.net:443' }
             ],
 
