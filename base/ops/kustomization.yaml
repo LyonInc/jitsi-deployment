@@ -3,7 +3,6 @@ kind: Kustomization
 
 resources:
 - monitoring/
-- logging/
 - metacontroller/
 - loadbalancer/
 - reflector/

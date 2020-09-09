@@ -2,7 +2,6 @@ bases:
   - ../../../base/ops
 
 resources:
-  - elasticsearch.yaml
   - grafana-tls-secret.yaml
 
 patchesStrategicMerge:
