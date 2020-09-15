@@ -4,7 +4,7 @@ metadata:
   namespace: monitoring
   name: grafana-storage
 spec:
-  storageClassName: longhorn
+  storageClassName: rook-cephfs
   accessModes:
     - ReadWriteOnce
   resources:
