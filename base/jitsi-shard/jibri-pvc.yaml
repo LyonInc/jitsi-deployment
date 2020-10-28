@@ -4,7 +4,7 @@ metadata:
   namespace: jitsi
   name: jibri-recorder
 spec:
-  storageClassName: rook-cephfs
+  storageClassName: longhorn
   accessModes:
     - ReadWriteOnce
   resources:
