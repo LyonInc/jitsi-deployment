@@ -42,7 +42,7 @@ spec:
             requests:
               memory: 500Mi
               cpu: 300m
-          image: jitsi/web:latest
+          image: jitsi/web:stable-5142
           imagePullPolicy: Always
           readinessProbe:
             httpGet:

@@ -44,7 +44,7 @@ spec:
             requests:
               memory: 300Mi
               cpu: 300m
-          image: jitsi/prosody:latest
+          image: jitsi/prosody:stable-5142
           imagePullPolicy: Always
           ports:
             - name: metrics
